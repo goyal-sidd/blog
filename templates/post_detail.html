@@ -1,0 +1,20 @@
+ {% extends "base.html" %}
+
+{% block head_title %}
+{{ instance.title }} | {{ block.super }}
+{% endblock head_title %}
+
+{% block content %}
+<div class="col-sm-6 col-sm-offset-3">
+	<img src='{{ instance.image.url }}' class="img-responsive" />	
+	<h1>{{ title }} <br><small>{% if instance.draft %}<span style="color:red;">Draft</span>{% endif %}{{ instance.publish }}</small></h1>
+	<br>
+	{% if instance.user.get_full_name %}
+	<p>Author: {{ instance.user.get_full_name }}</p>
+	{% endif %}
+	{{ instance.content|linebreaks }}<br>
+	<br>
+<!--	{{ instance.updated }}<br>
+	{{ instance.id }}<br>	-->
+</div>
+{% endblock content %}
