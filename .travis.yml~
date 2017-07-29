@@ -11,5 +11,8 @@ install:
 env:
   -DJANGO=1.9 DB=mysql
 
+before_script:
+  - mysql -e 'create database test;' -u root
+
 script:
-    -pytest
+    -python manage.py test
