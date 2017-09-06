@@ -21,3 +21,5 @@ The live blog is hosted on Heroku [here](sid22.herokuapp.com/posts/)
  - Create local database `python manage.py migrate ` and `python manage.py makemigrations`
  - Create a superuser `python manage.py createsuperuser  
  - Run it python manage.py runserver
+
+Contributor @goyal-sidd
